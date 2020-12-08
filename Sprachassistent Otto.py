@@ -155,7 +155,7 @@ def Website():
     driver.get("") #Website adresse hier einfügen
 
 def Spotifystart():
-    pyautogui.click(320, 1060) #Position des Spotify Icon in der taskbar hier anpassen
+    pyautogui.click(320, 1060) #Position des Spotify Icon in der taskbar hier angeben
     time.sleep(3)
     pyautogui.press("space")
     pyautogui.click(320, 1060)

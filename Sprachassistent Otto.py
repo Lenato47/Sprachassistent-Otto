@@ -80,7 +80,7 @@ def GoogleEarth():
     subprocess.Popen("C:\Program Files\Google\Google Earth Pro\client\googleearth.exe")
 
 def Program():
-    subprocess.Popen("Path/to/file")
+    subprocess.Popen("") #Dateipfad hier einfügen
 
 def Uhrzeit():
     hour=datetime.datetime.now().hour
@@ -152,10 +152,10 @@ def Youtube():
 
 def Website():
     driver = webdriver.Chrome()
-    driver.get("Website/adress")
+    driver.get("") #Website adresse hier einfügen
 
 def Spotifystart():
-    pyautogui.click(320, 1060)
+    pyautogui.click(320, 1060) #Position des Spotify Icon in der taskbar hier anpassen
     time.sleep(3)
     pyautogui.press("space")
     pyautogui.click(320, 1060)

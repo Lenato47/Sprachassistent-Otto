@@ -1,5 +1,6 @@
 # Sprachassistent-Otto
 Ein persönlicher Sprachassistent
+
 #Funktionen: 
 
 #Erinnerungen

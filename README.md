@@ -10,5 +10,6 @@ Ein persönlicher Sprachassistent
 #aktuelle Nachrichten durchgeben
 #beliebige Podcastfolge nstaaf abspielen
 #Wettervorhersage
+#Witze vorlesen
 #Websites öffnen
 #Spotify bedienen

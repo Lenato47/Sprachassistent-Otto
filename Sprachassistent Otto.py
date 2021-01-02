@@ -87,6 +87,29 @@ def Uhrzeit():
     minute = datetime.datetime.now().minute
     speakde("\"Es ist " + str(hour) + " Uhr " + str(minute) +"\"")
 
+def Witze():
+    source = requests.get("https://www.hahaha.de/witze/menue/zufallswitze/").text
+    soup = BeautifulSoup(source,"html.parser")
+
+    Witze = soup.find(class_="witz")
+    Witz = Witze.text
+
+
+    text = os.linesep.join([s for s in Witz.splitlines() if s])
+    fertiger_text = text.rsplit("\n",3)[0].replace("...","")
+
+    if "Bewerten" in fertiger_text:
+        finished_text = fertiger_text.splitlines(False)
+        finished_text1 = str(finished_text[:2])
+        finished_text2 = finished_text1.replace("[","").replace("]","").replace("', '","").replace("'","")
+        print(finished_text2)
+        speakde(finished_text2)
+
+    else:
+        print(fertiger_text)
+        speakde(fertiger_text)
+    
+    
 def Wikipedia():
     wiki_wiki = wikipediaapi.Wikipedia('de')
     speakde("Wonach soll gesucht werden? ")
@@ -205,6 +228,8 @@ while 1 != 0:
                 Nachrichten()
             elif "wetter" in statement1:
                 Wetter()
+            elif "Witze" in statement1:
+                Witze()
             elif "Program" in statement1:
                 Program()
             elif "Website" in statement1:
